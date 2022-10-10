@@ -1,0 +1,17 @@
+{
+  "name": "ApplePaySupression",
+  "version": "0.0.1",
+  "description": "A Cordova-Swift plugin Apple Pay Supression.",
+  "cordova": {
+    "id": "cordova-plugin-apple-pay-supression",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "James Millar",
+  "license": "MIT"
+}
