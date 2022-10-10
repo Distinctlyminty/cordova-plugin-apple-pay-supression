@@ -2,9 +2,9 @@
 <plugin id="cordova-plugin-apple-pay-supression" version="0.0.1"
         xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>ApplePaySupression</name>
-    <js-module name="ApplePaySupression" src="www/ApplePaySupression.js">
-        <clobbers target="ApplePaySupression" />
+    <name>applepaysupression</name>
+    <js-module name="applepaysupression" src="www/ApplePaySupression.js">
+        <clobbers target="applepaysupression" />
     </js-module>
 
     <platform name="ios">
@@ -15,8 +15,8 @@
         Add in any class declaration names here so that they can be accessed by Cordova. Else the plugin will fail.
         -->
 
-            <feature name="ApplePaySupression">
-                <param name="ios-package" value="ApplePaySupression" />
+            <feature name="applepaysupression">
+                <param name="ios-package" value="applepaysupression" />
             </feature>
 
         </config-file>
