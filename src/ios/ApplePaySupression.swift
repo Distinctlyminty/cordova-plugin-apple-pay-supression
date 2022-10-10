@@ -2,6 +2,8 @@
 Notes: Use the @objc identifier to show that this class/function should be exposed to Objective-c (Cordova).
 
 */
+import Foundation
+import PassKit
 
 @objc(TestPluginSwift) class PasskitHelper : CDVPlugin { // Declare the namespace you want to expose to cordova, when you call the Plugin 
 
