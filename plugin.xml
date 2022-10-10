@@ -2,9 +2,9 @@
 <plugin id="cordova-plugin-apple-pay-supression" version="0.0.1"
         xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>applepaysupression</name>
+    <name>cordova-plugin-apple-pay-supression</name>
     <js-module name="applepaysupression" src="www/ApplePaySupression.js">
-        <clobbers target="applepaysupression" />
+        <clobbers target="cordova.plugin.applepaysupression" />
     </js-module>
 
     <platform name="ios">
@@ -25,6 +25,6 @@
         <source-file src="src/ios/ApplePaySupression.swift" />
 
         <!-- Add in the swift-support plugin by default -->
-        <dependency id="cordova-plugin-add-swift-support" version="1.7.2"/>
+        <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
     </platform>
 </plugin>
