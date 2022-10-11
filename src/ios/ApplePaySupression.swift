@@ -9,7 +9,7 @@ import PassKit
 
   private static var tokenPKSuppresion:PKSuppressionRequestToken!;
 
-  @objc func supressApplePay(command: CDVInvokedUrlCommand){
+  @objc static func supressApplePay(command: CDVInvokedUrlCommand){
 
         var pluginResult = CDVPluginResult (status: CDVCommandStatus_ERROR);
 
@@ -35,7 +35,7 @@ import PassKit
   }
 
 
-  @objc func enableApplePay(command: CDVInvokedUrlCommand){
+  @objc static func enableApplePay(command: CDVInvokedUrlCommand){
 
         var pluginResult = CDVPluginResult (status: CDVCommandStatus_ERROR);
  if #available(iOS 9, *) {
