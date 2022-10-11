@@ -5,11 +5,11 @@ Notes: Use the @objc identifier to show that this class/function should be expos
 import Foundation
 import PassKit
 
-@objc(TestPluginSwift) class PasskitHelper : CDVPlugin { // Declare the namespace you want to expose to cordova, when you call the Plugin 
+@objc(ApplePaySupression) class ApplePaySupression : CDVPlugin { // Declare the namespace you want to expose to cordova, when you call the Plugin 
 
-  private static var tokenPKSuppresion:PKSuppressionRequestToken!;
+  private var tokenPKSuppresion:PKSuppressionRequestToken!;
 
-  @objc static func supressApplePay(command: CDVInvokedUrlCommand){
+  @objc func supressApplePay(command: CDVInvokedUrlCommand){
 
         var pluginResult = CDVPluginResult (status: CDVCommandStatus_ERROR);
 
@@ -35,7 +35,7 @@ import PassKit
   }
 
 
-  @objc static func enableApplePay(command: CDVInvokedUrlCommand){
+  @objc func enableApplePay(command: CDVInvokedUrlCommand){
 
         var pluginResult = CDVPluginResult (status: CDVCommandStatus_ERROR);
  if #available(iOS 9, *) {
