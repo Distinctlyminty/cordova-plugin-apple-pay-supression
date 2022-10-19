@@ -4,7 +4,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android">
     <name>cordova-plugin-apple-pay-supression</name>
     <js-module name="applepaysupression" src="www/ApplePaySupression.js">
-        <clobbers target="cordova.plugin.applepaysupression" />
+        <clobbers target="applepaysupression" />
     </js-module>
 
     <platform name="ios">
