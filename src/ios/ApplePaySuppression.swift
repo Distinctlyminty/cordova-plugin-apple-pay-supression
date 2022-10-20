@@ -5,9 +5,9 @@ Notes: Use the @objc identifier to show that this class/function should be expos
 import Foundation
 import PassKit
 
-@objc(ApplePaySupression) class ApplePaySupression : CDVPlugin { // Declare the namespace you want to expose to cordova, when you call the Plugin 
+@objc(ApplePaySuppression) class ApplePaySuppression : CDVPlugin { // Declare the namespace you want to expose to cordova, when you call the Plugin 
 
-  private var tokenPKSuppresion:PKSuppressionRequestToken!;
+  private var tokenPKSuppression:PKSuppressionRequestToken!;
 
   @objc func supressApplePay(command: CDVInvokedUrlCommand){
 
@@ -15,7 +15,7 @@ import PassKit
 
   if #available(iOS 9, *) {
             if( PKPassLibrary.isPassLibraryAvailable() && !PKPassLibrary.isSuppressingAutomaticPassPresentation()) {
-                tokenPKSuppresion = PKPassLibrary.requestAutomaticPassPresentationSuppression(responseHandler: { (result) in
+                tokenPKSuppression = PKPassLibrary.requestAutomaticPassPresentationSuppression(responseHandler: { (result) in
                     if result == PKAutomaticPassPresentationSuppressionResult.success {
                         print("Automatic Pass Presentation suppressed")
                     }
@@ -29,7 +29,7 @@ import PassKit
 
  pluginResult = CDVPluginResult(status: CDVCommandStatus_OK); // Set the plugin result to send back to the client.js file.
 
-    print("The Apple Pay Supression - supress apple pay function ran correctly!"); 
+    print("The Apple Pay suppression - suppress apple pay function ran correctly!"); 
     self.commandDelegate!.send(pluginResult, callbackId: command.callbackId); // Send the function result back to cordova.
  
   }
@@ -40,14 +40,14 @@ import PassKit
         var pluginResult = CDVPluginResult (status: CDVCommandStatus_ERROR);
  if #available(iOS 9, *) {
             if( PKPassLibrary.isPassLibraryAvailable() && PKPassLibrary.isSuppressingAutomaticPassPresentation()) {
-                PKPassLibrary.endAutomaticPassPresentationSuppression(withRequestToken: tokenPKSuppresion)
+                PKPassLibrary.endAutomaticPassPresentationSuppression(withRequestToken: tokenPKSuppression)
                 print("Automatic Pass Presentation enabled")
             }
         }
 
  pluginResult = CDVPluginResult(status: CDVCommandStatus_OK); // Set the plugin result to send back to the client.js file.
 
-    print("The Apple Pay Supression - enable apple pay function ran correctly!");
+    print("The Apple Pay suppression - enable apple pay function ran correctly!");
     self.commandDelegate!.send(pluginResult, callbackId: command.callbackId); // Send the function result back to cordova.
  
   }
