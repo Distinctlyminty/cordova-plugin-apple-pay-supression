@@ -7,7 +7,6 @@
 
 @implementation ApplePaySuppression : CDVPlugin
 
-// This implementation is just boilerplate for testing Objective C
 static PKSuppressionRequestToken * tokenPKSuppression = nil;
 private static var tokenPKSuppresion:PKSuppressionRequestToken!;
 
@@ -17,7 +16,6 @@ private static var tokenPKSuppresion:PKSuppressionRequestToken!;
         
     if (@available(iOS 9, *)) {
         if( PKPassLibrary.isPassLibraryAvailable && PKPassLibrary.isSuppressingAutomaticPassPresentation) {
-//                        PKPassLibrary.endAutomaticPassPresentationSuppression(withRequestToken: ApplePaySuppression.tokenPKSuppression)
             
             [PKPassLibrary endAutomaticPassPresentationSuppressionWithRequestToken:(PKSuppressionRequestToken) tokenPKSuppression];
                     }
@@ -33,9 +31,6 @@ private static var tokenPKSuppresion:PKSuppressionRequestToken!;
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:result];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
-    
-    
-    
 
 }
 
@@ -67,8 +62,6 @@ private static var tokenPKSuppresion:PKSuppressionRequestToken!;
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:result];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
-    
-   
 }
 
 @end
