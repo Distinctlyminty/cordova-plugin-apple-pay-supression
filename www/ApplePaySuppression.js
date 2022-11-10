@@ -1,16 +1,14 @@
-var exec = require('cordova/exec');
 
-var PLUGIN_NAME = "ApplePaySuppression"; // This is just for code completion uses.
 
-var applePaysuppression = function() {};
-// This is where we declare our functions for consumption in the view.
+module.exports = {
+	enableApplePay: function(success, error){
+		cordova.exec(success,error, 'ApplePaySuppression', 'enableApplePay');
+	},
 
-applePaysuppression.supressApplePay = function(arg0, success, error){
-	exec(success,error, 'ApplePaySuppression', 'enableApplePay', [arg0]);
+	disableApplePay: function(success, error) {
+		cordova.exec(success, error, 'ApplePaySuppression', 'disableApplePay');
+	}
 };
 
-applePaysuppression.enableApplePay = function(arg0, success, error) {
-	exec(success, error, 'ApplePaySuppression', 'supressApplePay', [arg0]);
-};
 
-module.exports = applePaySuppression;
+

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-apple-pay-suppression" version="0.0.14"
+<plugin id="cordova-plugin-apple-pay-suppression" version="1.0.0"
         xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
     <name>cordova-plugin-apple-pay-suppression</name>
@@ -10,21 +10,20 @@
     <platform name="ios">
     <framework src="PassKit.framework"/>
         <config-file target="config.xml" parent="/*">
-
-        <!--
-        Add in any class declaration names here so that they can be accessed by Cordova. Else the plugin will fail.
-        -->
-
             <feature name="ApplePaySuppression">
-                <param name="ios-package" value="ApplePaySuppression" />
+                <param name="ios-package" value="ApplePaySuppression"/>
             </feature>
 
         </config-file>
+      <header-file src="src/ios/ApplePaySuppression.h" />
+      <source-file src="src/ios/ApplePaySuppression.m" />
 
-        <!-- Add in the plugin .swift files here -->
-        <source-file src="src/ios/ApplePaySuppression.swift" />
-
-        <!-- Add in the swift-support plugin by default -->
-        <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
+	<config-file target="*/Entitlements-Debug.plist" parent="com.apple.developer.passkit.pass-presentation-suppression">
+				<true/>
+		</config-file>
+		<config-file target="*/Entitlements-Release.plist" parent="com.apple.developer.passkit.pass-presentation-suppression">
+			<true/>
+		</config-file>
     </platform>
+
 </plugin>

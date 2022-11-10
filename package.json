@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-apple-pay-suppression",
-  "version": "0.0.14",
+  "version": "1.0.0",
   "description": "A Cordova-Swift plugin Apple Pay suppression.",
   "cordova": {
     "id": "cordova-plugin-apple-pay-suppression",
