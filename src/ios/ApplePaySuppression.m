@@ -14,9 +14,7 @@ private static var tokenPKSuppresion:PKSuppressionRequestToken!;
 - (void)enableApplePay:(CDVInvokedUrlCommand *)command
 {
     CDVPluginResult * pluginResult = nil;
-    
-    // perform apple pay suppression
-    
+        
     if (@available(iOS 9, *)) {
         if( PKPassLibrary.isPassLibraryAvailable && PKPassLibrary.isSuppressingAutomaticPassPresentation) {
 //                        PKPassLibrary.endAutomaticPassPresentationSuppression(withRequestToken: ApplePaySuppression.tokenPKSuppression)
