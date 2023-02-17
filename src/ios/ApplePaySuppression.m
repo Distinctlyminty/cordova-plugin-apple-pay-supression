@@ -8,7 +8,6 @@
 @implementation ApplePaySuppression : CDVPlugin
 
 static PKSuppressionRequestToken * tokenPKSuppression = nil;
-private static var tokenPKSuppresion:PKSuppressionRequestToken!;
 
 - (void)enableApplePay:(CDVInvokedUrlCommand *)command
 {
